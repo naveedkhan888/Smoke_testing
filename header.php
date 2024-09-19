@@ -31,7 +31,11 @@
   z-index: 999;
   pointer-events: none;
 }
+.elementor-editor-active .tcg-smoke-cursor {
+	display: none !important;
+}
  </style>
+}
 </head>
 
 <body <?php body_class(); ?>>

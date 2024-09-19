@@ -21,9 +21,6 @@
 	<?php wp_head(); ?>
 
  <style type="text/css">
- html, body {
- 	height: 100%;
- }
  	.tcg-smoke-cursor {
   position: fixed;
   top: 0;

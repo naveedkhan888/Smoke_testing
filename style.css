@@ -796,7 +796,7 @@ html {
 }
 
 html, body {
-  background: #1B1B1B; /* Fallback for when there is no custom background color defined. */
+  background: #0E1317; /* Fallback for when there is no custom background color defined. */
 }
 
 hr {

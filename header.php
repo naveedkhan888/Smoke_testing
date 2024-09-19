@@ -19,11 +19,27 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+ <style type="text/css">
+ html, body {
+ 	height: 100%;
+ }
+ 	.tcg-smoke-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.07;
+  z-index: 999;
+  pointer-events: none;
+}
+ </style>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-
+<canvas class="tcg-smoke-cursor" id="tcg-smoke-cursor"></canvas>
 <div id="page" class="site">
 
 <?php if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {

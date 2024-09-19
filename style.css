@@ -795,7 +795,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+html, body {
   background: #1B1B1B; /* Fallback for when there is no custom background color defined. */
 }
 

@@ -35,7 +35,6 @@
 	display: none !important;
 }
  </style>
-}
 </head>
 
 <body <?php body_class(); ?>>

@@ -40,9 +40,9 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<?php if (!is_admin()) : ?>
-    <canvas class="tcg-smoke-cursor" id="tcg-smoke-cursor"></canvas>
-<?php endif; ?>
+
+<canvas class="tcg-smoke-cursor" id="tcg-smoke-cursor"></canvas>
+
 <div id="page" class="site">
 
 <?php if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {

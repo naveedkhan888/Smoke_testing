@@ -26,6 +26,6 @@ add_filter( 'elementor/fonts/groups', function( $font_groups ) {
 
 /* Filters the fonts used by Elementor to add additional fonts. */
 add_filter( 'elementor/fonts/additional_fonts', function ( $additional_fonts ) {
-  $additional_fonts['Merienda'] = 'restimo_fonts';
+  $additional_fonts['Forum'] = 'restimo_fonts';
   return $additional_fonts;
 } );

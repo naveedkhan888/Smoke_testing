@@ -136,7 +136,7 @@ function restimo_fonts_url() {
 	}
 
 	if ( !isset( $second_font['font-family'] ) || $second_font['font-family'] == '' ) {
-		$font_families[] = 'Merriweather:300,400,500,600,700,800,900';
+		$font_families[] = 'Merriweather:300,400,500,600,700';
 	}
 
 	if ( $font_families ) {

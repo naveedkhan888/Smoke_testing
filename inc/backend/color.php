@@ -14,7 +14,6 @@ if(!function_exists('restimo_color_scheme')){
 			.icon-box .title-box a,
 			.xp-switcher > span,
 			.woocommerce table.shop_table,
-			.post-box .entry-title a,
 			.post-box .entry-meta .btn-details,
 			.xp-counter-2 .c-number,
 			.panel-btn i,

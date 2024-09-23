@@ -2035,7 +2035,7 @@ a:hover, a:active {
   -ms-transition: all 0.3s linear;
 }
 .post-box .post-inner {
-  background: #fff;
+  background: #090C0F;
   margin-bottom: 60px;
   overflow: hidden;
   -webkit-border-radius: 5px;
@@ -2104,7 +2104,7 @@ a:hover, a:active {
   display: inline-block;
 }
 .post-box .entry-meta a {
-  color: #818181;
+  color: #fff;
 }
 .post-box .entry-meta a:hover {
   color: #C19977;
@@ -2113,7 +2113,8 @@ a:hover, a:active {
   position: absolute;
   right: 15px;
   top: 50%;
-  color: #131E30;
+  color: #ffffff;
+  background: transparent;
   border: 1px solid transparent;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -2129,7 +2130,7 @@ a:hover, a:active {
   line-height: 36px;
 }
 .post-box .entry-title a {
-  color: #131E30;
+  color: #ffffff;
   display: inline-block;
 }
 .post-box .entry-title a:hover {

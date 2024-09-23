@@ -4596,7 +4596,6 @@ object {
   display: inline-block;
   vertical-align: middle;
   margin: 5px;
-  min-width: 200px;
   text-align: center;
 }
 .tab-titles .title-item a {

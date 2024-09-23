@@ -1030,7 +1030,7 @@ input[type=color],
 textarea {
   color: #fff;
   background: transparent;
-  border: 1px solid #dbdbdb;
+  border: 1px solid #c19977;
   padding: 11px 24px;
   box-sizing: border-box;
   outline: none;
@@ -6371,10 +6371,10 @@ object {
     width: 100%;
     padding: 11px 24px; 
     margin-top: 0;
-    border: 1px solid #dbdbdb; 
+    border: 1px solid #c19977; 
     border-radius: 3px; 
     font-size: 14px; 
-    color: #666666; 
+    color: #ffffff; 
     box-sizing: border-box; 
     outline: none !important;
 }

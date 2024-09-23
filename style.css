@@ -4579,6 +4579,9 @@ object {
 /*--------------------------------------------------------------
 ## Tab Titles
 --------------------------------------------------------------*/
+.tab-titles .title-item a .icon i {
+  font-size: 52px;
+}
 .tab-titles {
   justify-content: center;
   margin: -5px;
@@ -4597,13 +4600,15 @@ object {
   text-align: center;
 }
 .tab-titles .title-item a {
-  display: block;
+  display: flex;
   color: #fff;
-  padding: 17px;
+  padding: 15px 30px;
   background: rgba(27, 29, 33, 0.2);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px;
+  border-radius: 15px;
+  gap: 3px;
+  flex-direction: column;
 }
 .tab-titles .title-item a.tab-active,
 .tab-titles .title-item a:hover {

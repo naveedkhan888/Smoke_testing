@@ -2095,9 +2095,9 @@ a:hover, a:active {
   font-family: "Merriweather", sans-serif;
   font-weight: 600;
   font-size: 13px;
-  color: #818181;
+  color: #fff;
   padding: 22px 40px;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 .post-box .entry-meta > span {
   margin-right: 5px;

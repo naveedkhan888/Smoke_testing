@@ -6392,6 +6392,22 @@ object {
     
 }
 
+/* Styling for the popup options */
+.wpcf7 select option {
+    background-color: #333; /* Dark background for options */
+    color: #ffffff; /* Light text color */
+}
+
+/* For Chrome/Safari: */
+.wpcf7 select optgroup {
+    background-color: #333;
+}
+
+/* Hover effect on options */
+.wpcf7 select option:hover {
+    background-color: #444; /* Slightly lighter background on hover */
+}
+
 
 
 

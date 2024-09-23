@@ -2114,8 +2114,8 @@ a:hover, a:active {
   right: 15px;
   top: 50%;
   color: #ffffff;
-  background: transparent;
-  border: 1px solid transparent;
+  background: transparent !important;
+  border: 1px solid transparent !important;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

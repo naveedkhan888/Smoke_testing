@@ -1051,14 +1051,23 @@ textarea {
   padding-bottom: 18px;
   height: 120px;
 }
-::placeholder {
-  color: red;
-  opacity: 1; /* Firefox */
+
+input::-webkit-input-placeholder { /* Chrome, Safari, Edge */
+  color: #ff6347;
 }
 
-::-ms-input-placeholder { /* Edge 12 -18 */
-  color: red;
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ff6347;
 }
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #ff6347;
+}
+
+input::placeholder { /* Standard syntax */
+  color: #ff6347;
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #5f5f5f;
 }

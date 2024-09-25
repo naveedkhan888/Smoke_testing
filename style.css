@@ -892,7 +892,7 @@ td {
   background: #C19977;
 }
 
-.rotate_anim svg{
+.rotate_anim svg {
     animation: rotate 20s linear infinite;
 }
 @-webkit-keyframes rotate {

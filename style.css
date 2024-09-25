@@ -945,7 +945,7 @@ td {
   position: relative;
 }
 .xptf-btn:hover, .xptf-btn:focus {
-  background: #131E30;
+  background: #ffffff;
 }
 .xptf-btn.xptf-btn-dark {
   background: #131E30;
@@ -957,7 +957,7 @@ td {
   margin-right: 12px;
 }
 .xptf-btn:hover, .xptf-btn:visited {
-  color: #fff;
+  color: #C19977;
 }
 
 .xptf-btn-dark {

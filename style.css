@@ -893,7 +893,7 @@ td {
 }
 
 .is-stuck.blurred_background {
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(13px);
 }
 
 .rotate_anim svg {

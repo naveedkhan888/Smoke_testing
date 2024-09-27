@@ -892,6 +892,10 @@ td {
   background: #C19977;
 }
 
+.is-stuck.blurred_background {
+  backdrop-filter: blur(12px);
+}
+
 .rotate_anim svg {
     animation: rotate 20s linear infinite;
 }

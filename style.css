@@ -776,7 +776,7 @@ mark, ins {
 
 .hl-text {
   font-weight: 400 !important;
-  color: #55bb53 !important;
+  color: #C19977 !important;
 }
 
 .is-fixed.is-stuck .off-boxshadow {
@@ -895,6 +895,7 @@ td {
 .is-stuck.blurred_background {
   backdrop-filter: blur(13px);
 }
+
 
 .rotate_anim svg {
     animation: rotate 20s linear infinite;

@@ -372,13 +372,13 @@ class Food_Price_Menu_Widget extends Widget_Base {
                 echo '<div class="content">';
                 echo '<div class="title_priccce">'; 
                 echo '<' . $item['title_tag'] . ' class="title">' . esc_html( $item['title'] ) . '</' . $item['title_tag'] . '>';
-                // Add item separator within the item
-                echo '<div class="item-separator"></div>';
-                echo '<div class="price">' . esc_html( $item['price'] ) . '</div>';
                 // Render Menu Label if available
                 if ( ! empty( $item['menu_label'] ) ) {
                     echo '<div class="menu-label">' . esc_html( $item['menu_label'] ) . '</div>';
                 }
+                // Add item separator within the item
+                echo '<div class="item-separator"></div>';
+                echo '<div class="price">' . esc_html( $item['price'] ) . '</div>';
                 echo '</div>';
                 echo '<' . $item['description_tag'] . ' class="description">' . esc_html( $item['description'] ) . '</' . $item['description_tag'] . '>';
                 if ( ! empty( $item['link']['url'] ) ) {
@@ -409,13 +409,13 @@ class Food_Price_Menu_Widget extends Widget_Base {
                         <div class="content">
                             <div class="title_priccce">
                                 <{{{ item.title_tag }}} class="title">{{{ item.title }}}</{{{ item.title_tag }}}>
+                                <# if ( item.menu_label ) { #>
+                                <div class="menu-label">{{{ item.menu_label }}}</div>
+                                <# } #>
                                 <# if ( index < settings.list.length - 1 ) { #>
                                     <div class="item-separator"></div>
                                 <# } #>
                                 <div class="price">{{{ item.price }}}</div>
-                                <# if ( item.menu_label ) { #>
-                                <div class="menu-label">{{{ item.menu_label }}}</div>
-                                <# } #>
                             </div>
                             <{{{ item.description_tag }}} class="description">{{{ item.description }}}</{{{ item.description_tag }}}>
                             <# if ( item.link.url ) { 

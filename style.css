@@ -7685,7 +7685,15 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 
 
 
-
+.food-price-menu .menu-label {
+  font-size: 74%;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1px 10px;
+  font-weight: 600;
+  margin: 0 0 0 10px;
+}
 .food-price-menu .menu-item:first-child {
   margin-top: 0 !important;
 }

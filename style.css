@@ -7830,7 +7830,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 .xp-text-marquee .content-wrapper .icon, .xp-text-marquee .content-wrapper-2 .icon {
   margin: 0 30px;
-  display: inline;
+  display: inline-block;
   vertical-align: middle;
 }
 .xp-text-marquee .content-wrapper .icon i, .xp-text-marquee .content-wrapper-2 .icon i {

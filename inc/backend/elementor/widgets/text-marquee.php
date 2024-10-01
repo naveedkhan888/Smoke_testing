@@ -371,4 +371,4 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 
 	
 }
-$widgets_manager->register( new Restimo_Elementor_Text_Marquee() );
+Plugin::instance()->widgets_manager->register_widget_type( new Restimo_Elementor_Text_Marquee() );

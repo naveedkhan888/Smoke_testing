@@ -104,6 +104,16 @@ class Food_Price_Menu_Widget extends Widget_Base {
         );
 
         $repeater->add_control(
+            'menu_label',
+            [
+                'label' => __( 'Menu Label', 'restimo' ),
+                'type' => Controls_Manager::TEXT,
+                'default' => __( 'Special', 'restimo' ),
+                'label_block' => true,
+            ]
+        );
+
+        $repeater->add_control(
             'image',
             [
                 'label' => __( 'Image', 'restimo' ),
@@ -207,6 +217,18 @@ class Food_Price_Menu_Widget extends Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .price' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        // Menu Label Style - Background Color
+        $this->add_control(
+            'menu_label_bg_color',
+            [
+                'label' => __( 'Menu Label Background Color', 'restimo' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .menu-label' => 'background-color: {{VALUE}}',
                 ],
             ]
         );
@@ -353,6 +375,10 @@ class Food_Price_Menu_Widget extends Widget_Base {
                 // Add item separator within the item
                 echo '<div class="item-separator"></div>';
                 echo '<div class="price">' . esc_html( $item['price'] ) . '</div>';
+                // Render Menu Label if available
+                if ( ! empty( $item['menu_label'] ) ) {
+                    echo '<div class="menu-label">' . esc_html( $item['menu_label'] ) . '</div>';
+                }
                 echo '</div>';
                 echo '<' . $item['description_tag'] . ' class="description">' . esc_html( $item['description'] ) . '</' . $item['description_tag'] . '>';
                 if ( ! empty( $item['link']['url'] ) ) {
@@ -387,6 +413,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
                                     <div class="item-separator"></div>
                                 <# } #>
                                 <div class="price">{{{ item.price }}}</div>
+                                <# if ( item.menu_label ) { #>
+                                <div class="menu-label">{{{ item.menu_label }}}</div>
+                                <# } #>
                             </div>
                             <{{{ item.description_tag }}} class="description">{{{ item.description }}}</{{{ item.description_tag }}}>
                             <# if ( item.link.url ) { 

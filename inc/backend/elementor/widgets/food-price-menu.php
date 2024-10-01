@@ -221,104 +221,17 @@ class Food_Price_Menu_Widget extends Widget_Base {
             ]
         );
 
-        // Start Menu Label Style Section in the Style tab
-$this->start_controls_section(
-    'section_menu_label_style',
-    [
-        'label' => __( 'Menu Label', 'restimo' ),
-        'tab' => Controls_Manager::TAB_STYLE,
-    ]
-);
-
-// Background Color
-$this->add_control(
-    'menu_label_bg_color',
-    [
-        'label' => __( 'Background Color', 'restimo' ),
-        'type' => Controls_Manager::COLOR,
-        'selectors' => [
-            '{{WRAPPER}} .menu-label' => 'background-color: {{VALUE}}',
-        ],
-    ]
-);
-
-// Text Color
-$this->add_control(
-    'menu_label_text_color',
-    [
-        'label' => __( 'Text Color', 'restimo' ),
-        'type' => Controls_Manager::COLOR,
-        'selectors' => [
-            '{{WRAPPER}} .menu-label' => 'color: {{VALUE}}',
-        ],
-    ]
-);
-
-// Border Radius
-$this->add_responsive_control(
-    'menu_label_border_radius',
-    [
-        'label' => __( 'Border Radius', 'restimo' ),
-        'type' => Controls_Manager::DIMENSIONS,
-        'size_units' => [ 'px', '%' ],
-        'selectors' => [
-            '{{WRAPPER}} .menu-label' => 'border-radius: {{TOP}} {{RIGHT}} {{BOTTOM}} {{LEFT}};',
-        ],
-    ]
-);
-
-// Padding
-$this->add_responsive_control(
-    'menu_label_padding',
-    [
-        'label' => __( 'Padding', 'restimo' ),
-        'type' => Controls_Manager::DIMENSIONS,
-        'size_units' => [ 'px', 'em', '%' ],
-        'selectors' => [
-            '{{WRAPPER}} .menu-label' => 'padding: {{TOP}} {{RIGHT}} {{BOTTOM}} {{LEFT}};',
-        ],
-    ]
-);
-
-// Margin
-$this->add_responsive_control(
-    'menu_label_margin',
-    [
-        'label' => __( 'Margin', 'restimo' ),
-        'type' => Controls_Manager::DIMENSIONS,
-        'size_units' => [ 'px', 'em', '%' ],
-        'selectors' => [
-            '{{WRAPPER}} .menu-label' => 'margin: {{TOP}} {{RIGHT}} {{BOTTOM}} {{LEFT}};',
-        ],
-    ]
-);
-
-// Font Size
-$this->add_control(
-    'menu_label_font_size',
-    [
-        'label' => __( 'Font Size', 'restimo' ),
-        'type' => Controls_Manager::SLIDER,
-        'size_units' => [ 'px', 'em', 'rem' ],
-        'range' => [
-            'px' => [
-                'min' => 10,
-                'max' => 50,
-            ],
-            'em' => [
-                'min' => 0.5,
-                'max' => 5,
-            ],
-            'rem' => [
-                'min' => 0.5,
-                'max' => 5,
-            ],
-        ],
-        'selectors' => [
-            '{{WRAPPER}} .menu-label' => 'font-size: {{SIZE}}{{UNIT}};',
-        ],
-    ]
-);
+        // Menu Label Style - Background Color
+        $this->add_control(
+            'menu_label_bg_color',
+            [
+                'label' => __( 'Menu Label Background Color', 'restimo' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .menu-label' => 'background-color: {{VALUE}}',
+                ],
+            ]
+        );
 
         $this->add_group_control(
             Group_Control_Typography::get_type(),

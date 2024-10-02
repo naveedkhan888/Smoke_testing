@@ -432,7 +432,9 @@ class Restimo_Image_Box_2 extends Widget_Base{
 			<?php echo wp_kses_post( $image_html ); ?>
 			<div class="content-box">
 				<?php if ( $settings['title'] ) { 
-				    echo wp_kses_post( $title_html . ' <i class="xp-webicon-trajectory"></i>' ); 
+				    // Append the icon inside the anchor tag
+				    $title_html = str_replace('</a>', ' <i class="xp-webicon-trajectory"></i></a>', $title_html);
+				    echo wp_kses_post( $title_html ); 
 				} ?>
 				<?php if( $settings['des'] ) { echo '<p>' .$settings['des']. '</p>'; } ?>
 			</div>

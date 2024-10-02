@@ -4653,13 +4653,10 @@ object {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 15px;
-  gap: 3px;
+  gap: 10px;
   flex-direction: column;
 }
-.tab-titles .title-item a.tab-active,
-.tab-titles .title-item a:hover {
-  background: #131E30;
-}
+
 
 @media (max-width: 767px) {
   .tab-titles,

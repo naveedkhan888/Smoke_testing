@@ -431,10 +431,12 @@ class Restimo_Image_Box_2 extends Widget_Base{
 		<div class="xp-image-box">
 			<?php echo wp_kses_post( $image_html ); ?>
 			<div class="content-box">
-				<?php if ( $settings['title'] ) { echo wp_kses_post( $title_html ); } ?>
+				<?php if ( $settings['title'] ) { 
+				    echo '<i class="xp-webicon-trajectory"></i> ' . wp_kses_post( $title_html ); 
+				} ?>
 				<?php if( $settings['des'] ) { echo '<p>' .$settings['des']. '</p>'; } ?>
 			</div>
-			<?php if( $settings['label_link'] ){ echo '<a ' .$this->get_render_attribute_string( 'button' ). '><span>' .$settings['label_link']. '</span><i class="xp-webicon-trajectory"></i></a>'; } ?>
+			<?php if( $settings['label_link'] ){ echo '<a ' .$this->get_render_attribute_string( 'button' ). '><span>' .$settings['label_link']. '</span></a>'; } ?>
 	    </div>
 
 	    <?php

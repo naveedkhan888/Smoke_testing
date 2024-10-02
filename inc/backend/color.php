@@ -84,7 +84,6 @@ if(!function_exists('restimo_color_scheme')){
 			.xptf-btn.xptf-btn-dark:focus,
 			.features-service-wrapper .btn-details:hover,
 			.xp-heading > span.is_highlight,
-			.tab-titles .title-item a.tab-active, .tab-titles .title-item a:hover,
 			.list-primary li:before,
 			.btn-details:hover,
 			.owl-carousel .owl-dots button.owl-dot.active span,
@@ -127,8 +126,6 @@ if(!function_exists('restimo_color_scheme')){
 			.woocommerce button.button,
 			.woocommerce-mini-cart__buttons a.button.wc-forward,
 			.woocommerce-mini-cart__buttons a.button.wc-forward:hover{ background: '.restimo_get_option('main_color').'; }
-			.tab-titles .title-item a.tab-active,
-			.tab-titles .title-item a:hover,
 			.slide-rev-subtitle {
 				background: '.restimo_get_option('main_color').' !important;
 			}
@@ -222,6 +219,8 @@ if(!function_exists('restimo_color_scheme')){
 			.woocommerce .widget_price_filter .price_slider_amount button.button,
 			.elementor-widget-icon.elementor-view-framed .elementor-icon,
 			.elementor-widget-icon.elementor-view-default .elementor-icon,
+			.tab-titles .title-item a.tab-active,
+			.tab-titles .title-item a:hover,
 			.xp-counter-2.icounter .c-number.font-second span.num + span,
 			.woocommerce div.product p.price,.woocommerce div.product span.price{ color: '.restimo_get_option('main_color').'; }
 

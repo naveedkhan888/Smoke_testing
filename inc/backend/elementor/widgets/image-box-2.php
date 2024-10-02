@@ -374,7 +374,7 @@ class Restimo_Image_Box_2 extends Widget_Base{
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
-		$this->add_render_attribute( 'heading', 'class', 'title-box image_bx_2' );
+		$this->add_render_attribute( 'heading', 'class', 'title-box' );
 		$title = $settings['title'];
 		$title_html = sprintf( '<%1$s %2$s>%3$s</%1$s>', $settings['header_size'], $this->get_render_attribute_string( 'heading' ), $title );
 		$image_html = Group_Control_Image_Size::get_attachment_image_html( $settings, 'image_box_size', 'image_box' );
@@ -389,7 +389,7 @@ class Restimo_Image_Box_2 extends Widget_Base{
 
 		?>
 
-		<div class="xp-image-box">
+		<div class="xp-image-box image_bx_2">
 			<?php echo wp_kses_post( $image_html ); ?>
 			<div class="content-box">
 				<?php if ( $settings['title'] ) { 

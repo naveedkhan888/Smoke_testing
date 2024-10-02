@@ -261,46 +261,7 @@ class Restimo_Image_Box_2 extends Widget_Base{
 			]
 		);
 
-		/* description */
-		$this->add_control(
-			'heading_des',
-			[
-				'label' => __( 'Description', 'restimo' ),
-				'type' => Controls_Manager::HEADING,
-				'separator' => 'before',
-			]
-		);
-		$this->add_control(
-			'des_color',
-			[
-				'label' => __( 'Color', 'restimo' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .content-box p' => 'color: {{VALUE}};',
-				],
-			]
-		);
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'des_typography',
-				'selector' => '{{WRAPPER}} .content-box p',
-			]
-		);
-
-		/* button */
-		$this->add_control(
-			'heading_btn',
-			[
-				'label' => __( 'Button', 'restimo' ),
-				'type' => Controls_Manager::HEADING,
-				'separator' => 'before',
-				'condition' => [
-					'label_link!' => '',
-				],
-			]
-		);
+		
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
@@ -436,9 +397,8 @@ class Restimo_Image_Box_2 extends Widget_Base{
 				    $title_html = str_replace('</a>', ' <i class="xp-webicon-trajectory"></i></a>', $title_html);
 				    echo wp_kses_post( $title_html ); 
 				} ?>
-				<?php if( $settings['des'] ) { echo '<p>' .$settings['des']. '</p>'; } ?>
+				
 			</div>
-			<?php if( $settings['label_link'] ){ echo '<a ' .$this->get_render_attribute_string( 'button' ). '><span>' .$settings['label_link']. '</span><i class="xp-webicon-trajectory"></i></a>'; } ?>
 	    </div>
 
 	    <?php

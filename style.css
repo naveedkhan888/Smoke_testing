@@ -55,7 +55,8 @@ html {
   overflow-x: hidden;
 }
 
-body.woocommerce-page .site {
+body.woocommerce-page .site, 
+body.blog .site {
   background: #fff;
 }
 

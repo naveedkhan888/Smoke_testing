@@ -55,10 +55,15 @@ html {
   overflow-x: hidden;
 }
 
-body.woocommerce-page .site {
+body.woocommerce-page .site, 
+body.blog .site, 
+body.single-post .site {
   background: #fff;
 }
 
+.related.products ul.products li.product {
+  margin-bottom: 0 !important;
+}
 /* Sections
    ========================================================================== */
 /**
@@ -3021,26 +3026,6 @@ a:hover, a:active {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   position: relative;
 }
-body.blog .widget-area .widget .widget-title {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-}
-body.blog .post-box .link-box a {
-  color: #fff;
-}
-body.blog .post-box .quote-box .quote-text {
-  color: #fff;
-}
-body.blog .author-widget_wrapper .author-widget_title, 
-body.blog .widget-area .widget ul:not(.recent-news) > li a, 
-body.blog .widget .recent-news h6 a {
-  color: #ffffff;
-}
-body.blog .author-widget_wrapper.text-center {
-  background: #080b0f;
-}
-body.blog .search-form .search-field {
-  border-color: rgba(255, 255, 255, 0.15); }
 .widget-area .widget .widget-title:before {
   content: "";
   position: absolute;
@@ -3060,9 +3045,6 @@ body.blog .search-form .search-field {
   height: 3px;
   background: #fff;
   z-index: 1;
-}
-body.blog .widget-area .widget .widget-title:after {
-  background: #0d1116;
 }
 .widget-area .widget ul:not(.recent-news) > li {
   font-size: 14px;

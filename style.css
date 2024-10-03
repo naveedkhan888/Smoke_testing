@@ -55,6 +55,10 @@ html {
   overflow-x: hidden;
 }
 
+body.woocommerce-page .site {
+  background: #fff;
+}
+
 /* Sections
    ========================================================================== */
 /**

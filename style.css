@@ -1061,7 +1061,6 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 textarea {
-  color: #fff;
   background: transparent;
   border: 1px solid #c19977;
   padding: 11px 24px;

@@ -3023,6 +3023,13 @@ a:hover, a:active {
 }
 body.blog .widget-area .widget .widget-title {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+body.blog .post-box .link-box a {
+  color: #fff;
+}
+body.blog .post-box .quote-box .quote-text {
+  color: #fff;
 }
 body.blog .author-widget_wrapper .author-widget_title, 
 body.blog .widget-area .widget ul:not(.recent-news) > li a, 

@@ -3196,6 +3196,9 @@ a:hover, a:active {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
+.widget_search .search-form .search-field {
+  border-color: rgba(255, 255, 255, 0.15);
+}
 .search-form .search-submit {
   border: none;
   position: absolute;

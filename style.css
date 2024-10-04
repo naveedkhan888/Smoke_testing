@@ -383,7 +383,13 @@ body.single-post h2,
 body.single-post h3, 
 body.single-post h4, 
 body.single-post h5,
-body.single-post h6, 
+body.single-post h6,
+body.woocommerce-checkout h1, 
+body.woocommerce-checkout h2, 
+body.woocommerce-checkout h3, 
+body.woocommerce-checkout h4, 
+body.woocommerce-checkout h5,
+body.woocommerce-checkout h6, 
 body.woocommerce h6 {
   color: #ffffff;
 }
@@ -891,7 +897,7 @@ th {
 table,
 th,
 td {
-  border: 1px solid #eee;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 th {

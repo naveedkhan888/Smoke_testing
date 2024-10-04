@@ -784,9 +784,13 @@ WooCommerce styles override
   font-weight: 600;
   line-height: 22px;
 }
-.woocommerce .site .widget.widget_shopping_cart ul.product_list_widget li a:not(.remove), 
-.woocommerce .widget.widget_shopping_cart .total strong {
+.woocommerce .site section.widget ul.product_list_widget li a:not(.remove), 
+.woocommerce section.widget .total strong, 
+.woocommerce section.widget_shopping_cart .cart_list .quantity {
   color: #ffffff;
+}
+.woocommerce-product-details__short-description ul li {
+  color: #fff;
 }
 .woocommerce .site ul.product_list_widget li a:not(.remove):hover {
   color: #C19977;

@@ -781,6 +781,10 @@ WooCommerce styles override
   font-weight: 600;
   line-height: 22px;
 }
+.woocommerce .site .widget.widget_shopping_cart ul.product_list_widget li a:not(.remove), 
+.woocommerce .widget.widget_shopping_cart .total strong {
+  color: #ffffff;
+}
 .woocommerce .site ul.product_list_widget li a:not(.remove):hover {
   color: #C19977;
 }

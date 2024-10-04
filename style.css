@@ -3031,7 +3031,7 @@ a:hover, a:active {
 .widget-area .widget .widget-title {
   padding-bottom: 18px;
   margin-bottom: 35px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   position: relative;
 }
 .widget-area .widget .widget-title:before {

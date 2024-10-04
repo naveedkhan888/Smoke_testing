@@ -2088,6 +2088,7 @@ a:hover, a:active {
 }
 .post-box p {
   margin-bottom: 0;
+  color: #ffffff;
 }
 .post-box .entry-media {
   position: relative;
@@ -2212,7 +2213,7 @@ a:hover, a:active {
   font-size: 22px;
   font-weight: 600;
   font-family: "Merriweather", sans-serif;
-  color: #0E1317;
+  color: #ffffff;
 }
 .post-box .link-box a:hover {
   color: #C19977;
@@ -2244,7 +2245,7 @@ a:hover, a:active {
   font-weight: 500;
   font-family: "Merriweather", sans-serif;
   line-height: 36px;
-  color: #0E1317;
+  color: #ffffff;
 }
 .post-box .quote-box .quote-text span {
   font-size: 14px;
@@ -3171,7 +3172,7 @@ a:hover, a:active {
   font-weight: 500;
 }
 .widget .recent-news h6 a {
-  color: #0E1317;
+  color: #ffffff;
 }
 .widget .recent-news .post-on {
   font-family: "Merriweather", sans-serif;
@@ -3244,6 +3245,7 @@ a:hover, a:active {
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 .author-widget_wrapper .author-widget_image-wrapper {
   margin-bottom: 22px;

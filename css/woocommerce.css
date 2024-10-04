@@ -308,7 +308,7 @@ WooCommerce styles override
 }
 .single-product .woocommerce-product-gallery__image,
 .single-product div.product div.images .flex-control-thumbs li img {
-  border: 1px solid #dbdbdb;
+  border: 1px solid transparent;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -425,7 +425,7 @@ WooCommerce styles override
   color: #0E1317;
   text-transform: uppercase;
   font-size: 14px;
-  border-bottom: 3px solid #d7d7d7;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.15);
   transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -437,7 +437,7 @@ WooCommerce styles override
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
   border-color: #C19977;
-  color: #0E1317;
+  color: #ffffff;
 }
 
 .woocommerce table.shop_attributes td p {

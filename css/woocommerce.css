@@ -304,7 +304,7 @@ WooCommerce styles override
 .single-product .woocommerce-tabs .comment-reply-title {
   font-size: 24px;
   font-weight: 600;
-  color: #0E1317;
+  color: #ffffff;
 }
 .single-product .woocommerce-product-gallery__image,
 .single-product div.product div.images .flex-control-thumbs li img {
@@ -422,7 +422,7 @@ WooCommerce styles override
   min-width: 177px;
   text-align: center;
   font-weight: 600;
-  color: #0E1317;
+  color: #ffffff;
   text-transform: uppercase;
   font-size: 14px;
   border-bottom: 3px solid rgba(255, 255, 255, 0.15);
@@ -434,6 +434,9 @@ WooCommerce styles override
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
   border-color: #C19977;
+}
+.woocommerce-product-details__short-description p {
+  color: #ffffff;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
   border-color: #C19977;
@@ -955,7 +958,7 @@ WooCommerce styles override
 
 .product_meta > span {
   display: block;
-  color: #1a1b1e;
+  color: #ffffff;
   font-size: 16px;
   font-family: "Merriweather", sans-serif;
   font-weight: 600;
@@ -965,9 +968,11 @@ WooCommerce styles override
 .product_meta > span > * {
   font-weight: 500;
   text-transform: none;
-  color: #636363;
+  color: #b6b4b4;
 }
-
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+  background: transparent;
+}
 .woocommerce-review-link {
   color: #666666;
   font-size: 16px;

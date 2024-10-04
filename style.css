@@ -378,6 +378,12 @@ body.blog h3,
 body.blog h4, 
 body.blog h5,
 body.blog h6,  
+body.single-post h1, 
+body.single-post h2, 
+body.single-post h3, 
+body.single-post h4, 
+body.single-post h5,
+body.single-post h6, 
 body.woocommerce h6 {
   color: #ffffff;
 }
@@ -3066,7 +3072,7 @@ a:hover, a:active {
 }
 .widget-area .widget ul:not(.recent-news) > li a {
   font-weight: 600;
-  color: #0E1317;
+  color: #ffffff;
   display: inline-block;
   position: relative;
   transition: all 0.35s linear;

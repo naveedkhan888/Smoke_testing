@@ -471,6 +471,9 @@ WooCommerce styles override
 .woocommerce-cart-form table, .woocommerce-cart-form th, .woocommerce-cart-form td {
   border: 0px solid #eee;
 }
+.woocommerce form .form-row label {
+  color: #fff;
+}
 
 .woocommerce table.shop_table {
   font-family: "Merriweather", sans-serif;

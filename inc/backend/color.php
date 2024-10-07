@@ -163,6 +163,7 @@ if(!function_exists('restimo_color_scheme')){
 
 			/*Color*/
 			blockquote:before,
+			.hl-text, 
 			.main-navigation > ul > li.current_page_item > a,
 			.main-navigation > ul > li.current-menu-parent > a,
 			.food-price-menu .menu-item .content .title_priccce .price,

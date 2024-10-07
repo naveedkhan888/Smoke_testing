@@ -80,6 +80,7 @@ if(!function_exists('restimo_color_scheme')){
 			/*Background Color*/
 			.bg-primary,
 			.image-box-price .price-box, 
+			.with-border-yes .icon-main .circle-animate::after, 
 			.elementor-social-icons-wrapper a.elementor-social-icon,
 			.xptf-btn.xptf-btn-dark:hover,
 			.xptf-btn.xptf-btn-dark:focus,
@@ -218,16 +219,16 @@ if(!function_exists('restimo_color_scheme')){
 			.woocommerce .site ul.product_list_widget li a:not(.remove):hover,
 			.woocommerce .woocommerce-widget-layered-nav-list li a:hover,
 			.woocommerce .widget_price_filter .price_slider_amount button.button,
-			.elementor-widget-icon.elementor-view-framed .elementor-icon,
-			.elementor-widget-icon.elementor-view-default .elementor-icon,
 			.tab-titles .title-item a.tab-active,
 			.tab-titles .title-item a:hover,
-			.xp-counter-2.icounter .c-number.font-second span.num + span,
+			.xp-counter-2.icounter .c-number.font-second span.num + span, 
 			.woocommerce div.product p.price,.woocommerce div.product span.price{ color: '.restimo_get_option('main_color').'; }
 
 			.main-navigation > ul > li:hover > a,
 			.main-navigation ul li li a:hover,.main-navigation ul ul.sub-menu li.current-menu-item > a,.main-navigation ul ul.sub-menu li.current-menu-ancestor > a,
 			.main-navigation ul > li.menu-item-has-children:hover > a,
+			.elementor-widget-icon.elementor-view-framed .elementor-icon,
+			.elementor-widget-icon.elementor-view-default .elementor-icon,
 			.main-navigation ul > li.menu-item-has-children:hover > a:after,
 			.main-navigation ul > li.menu-item-has-children > a:hover:after{
 				color:'.restimo_get_option('main_color').' !important;

@@ -805,7 +805,7 @@ mark, ins {
 }
 
 .hl-text {
-  color: #C19977 !important;
+  color: #C19977;
 }
 
 .is-fixed.is-stuck .off-boxshadow {

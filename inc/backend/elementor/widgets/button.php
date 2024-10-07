@@ -44,6 +44,7 @@ class Restimo_Button extends Widget_Base{
 			'main' 	=> __( 'Main Color', 'restimo' ),
 			'dark' 	=> __( 'Dark Color', 'restimo' ),
 			'light' => __( 'Light Color', 'restimo' ),
+			'border' 	=> __( 'Border Color', 'restimo' ),
 		];
 	}
 

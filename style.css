@@ -4082,7 +4082,8 @@ object {
   position: absolute;
   top: 0;
   right: 0;
-  background: #fff;
+  background: #C19977;
+  color: #fff;
   padding: 10px 12px;
 }
 .xp-image-box .content-box.image-box-price {

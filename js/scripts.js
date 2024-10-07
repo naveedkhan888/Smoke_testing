@@ -281,13 +281,6 @@
     });
 
     /* --------------------------------------------------
-    * Button text animation applied globally to all .button elements
-    * --------------------------------------------------*/
-    document.querySelectorAll('.xptf-btn').forEach(button => {
-        button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
-    });
-    
-    /* --------------------------------------------------
     * back to top
     * --------------------------------------------------*/
     if ($('#back-to-top').length) {

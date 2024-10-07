@@ -79,6 +79,7 @@ if(!function_exists('restimo_color_scheme')){
 
 			/*Background Color*/
 			.bg-primary,
+			.image-box-price .price-box, 
 			.elementor-social-icons-wrapper a.elementor-social-icon,
 			.xptf-btn.xptf-btn-dark:hover,
 			.xptf-btn.xptf-btn-dark:focus,

@@ -6356,6 +6356,7 @@ object {
 .wpcf7 textarea {
   width: 100%;
   vertical-align: middle;
+  color: #fff;
 }
 .wpcf7 p {
   display: block;

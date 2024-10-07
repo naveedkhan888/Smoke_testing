@@ -1083,7 +1083,7 @@ input[type=datetime-local],
 input[type=color],
 textarea {
   background: transparent;
-  border: 1px solid #c19977;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 11px 24px;
   box-sizing: border-box;
   outline: none;
@@ -6431,7 +6431,7 @@ object {
     width: 100%;
     padding: 11px 24px; 
     margin-top: 0;
-    border: 1px solid #c19977; 
+    border: 1px solid rgba(255, 255, 255, 0.15); 
     border-radius: 3px; 
     font-size: 14px; 
     color: #ffffff; 

@@ -2100,7 +2100,7 @@ a:hover, a:active {
 }
 .post-box p {
   margin-bottom: 0;
-  color: #ffffff;
+  color: #9f9e9e;
 }
 .post-box .entry-media {
   position: relative;
@@ -2158,7 +2158,7 @@ a:hover, a:active {
   display: inline-block;
 }
 .post-box .entry-meta a {
-  color: #fff;
+  color: #9f9e9e;
 }
 .post-box .entry-meta a:hover {
   color: #C19977;
@@ -2167,7 +2167,7 @@ a:hover, a:active {
   position: absolute;
   right: 15px;
   top: 50%;
-  color: #ffffff;
+  color: #9f9e9e;
   background: transparent !important;
   border: 1px solid transparent !important;
   -webkit-transform: translateY(-50%);
@@ -3274,6 +3274,7 @@ a:hover, a:active {
   font-size: 14px;
   line-height: 28px;
   margin-bottom: 20px;
+  color: #9f9e9e;
 }
 .author-widget_wrapper:before {
   content: "";

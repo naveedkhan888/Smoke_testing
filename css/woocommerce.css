@@ -784,7 +784,7 @@ WooCommerce styles override
   float: left;
   margin-left: 0;
   margin-right: 20px;
-  border: 1px solid #dbdbdb;
+  border: 0px solid #dbdbdb;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;

@@ -2374,7 +2374,7 @@ a:hover, a:active {
 }
 .blog-post .tagcloud a {
   color: #717171;
-  background: #f5f5f5;
+  background: transparent;
   font-size: 12px !important;
   font-family: "Merriweather", sans-serif;
   text-transform: uppercase;
@@ -2385,7 +2385,7 @@ a:hover, a:active {
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -2450,7 +2450,7 @@ a:hover, a:active {
 }
 .blog-post .author-bio {
   overflow: hidden;
-  background: #f5f5f5;
+  background: #080b0f;
   padding: 40px;
   margin-bottom: 45px;
   -webkit-border-radius: 5px;

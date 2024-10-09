@@ -2154,7 +2154,7 @@ a:hover, a:active {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 .post-box .entry-meta > span {
-  margin-right: 5px;
+  margin-right: 0;
   display: inline-block;
 }
 .post-box .entry-meta a {
@@ -2162,6 +2162,10 @@ a:hover, a:active {
 }
 .post-box .entry-meta a:hover {
   color: #C19977;
+}
+.divider_blg {
+  display: inline;
+  margin: 0 6px;
 }
 .post-box .entry-meta .btn-details {
   position: absolute;

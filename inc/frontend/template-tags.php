@@ -113,8 +113,8 @@ if ( ! function_exists( 'restimo_post_meta' ) ) :
         $metas = restimo_get_option( 'post_entry_meta' );
         if ( ! empty( $metas ) ) :
             if( in_array('date', $metas) ) echo '<span class="posted-on">' . $posted_on . '</span>';
-            if( in_array('author', $metas) ) echo '<span class="byline"> / ' . $byline . '</span>';
-            if( in_array('comm', $metas) ) echo '<span class="comment-num"> / ' . $comment_num . '</span>';
+            if( in_array('author', $metas) ) echo '<span class="byline"> <div class="divider_blg">/</div> ' . $byline . '</span>';
+            if( in_array('comm', $metas) ) echo '<span class="comment-num"> <div class="divider_blg">/</div> ' . $comment_num . '</span>';
         endif;
 
     }

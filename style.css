@@ -7840,27 +7840,27 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   direction: rtl;
 }
 .xp-text-marquee.direction-ltr .content-wrapper {
-  animation: xp_scroll_ltr 20s linear infinite;
+  animation: xp_scroll_ltr 20s linear infinite reverse;
   animation-delay: -20s;
 }
 .xp-text-marquee.direction-ltr .content-wrapper-2 {
-  animation: xp_scroll2_ltr 20s linear infinite;
+  animation: xp_scroll2_ltr 20s linear infinite reverse;
   animation-delay: -10s;
 }
 .xp-text-marquee.direction-ltr.duration-slow .content-wrapper {
-  animation: xp_scroll_ltr 30s linear infinite;
+  animation: xp_scroll_ltr 30s linear infinite reverse;
   animation-delay: -30s;
 }
 .xp-text-marquee.direction-ltr.duration-slow .content-wrapper-2 {
-  animation: xp_scroll2_ltr 30s linear infinite;
+  animation: xp_scroll2_ltr 30s linear infinite reverse;
   animation-delay: -15s;
 }
 .xp-text-marquee.direction-ltr.duration-fast .content-wrapper {
-  animation: xp_scroll_ltr 10s linear infinite;
+  animation: xp_scroll_ltr 10s linear infinite reverse;
   animation-delay: -10s;
 }
 .xp-text-marquee.direction-ltr.duration-fast .content-wrapper-2 {
-  animation: xp_scroll2_ltr 10s linear infinite;
+  animation: xp_scroll2_ltr 10s linear infinite reverse;
   animation-delay: -5s;
 }
 .xp-text-marquee .content-wrapper, .xp-text-marquee .content-wrapper-2 {
@@ -7892,7 +7892,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   width: 200%;
 }
 .xp-text-marquee .content-wrapper {
-  animation: xp_scroll 20s linear infinite;
+  animation: xp_scroll 20s linear infinite reverse;
   animation-delay: -20s;
 }
 .xp-text-marquee .spacing {
@@ -7902,23 +7902,23 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   width: 600px;
 }
 .xp-text-marquee .content-wrapper-2 {
-  animation: xp_scroll2 20s linear infinite;
+  animation: xp_scroll2 20s linear infinite reverse;
   animation-delay: -10s;
 }
 .xp-text-marquee.duration-slow .content-wrapper {
-  animation: xp_scroll 30s linear infinite;
+  animation: xp_scroll 30s linear infinite reverse;
   animation-delay: -30s;
 }
 .xp-text-marquee.duration-slow .content-wrapper-2 {
-  animation: xp_scroll2 30s linear infinite;
+  animation: xp_scroll2 30s linear infinite reverse;
   animation-delay: -15s;
 }
 .xp-text-marquee.duration-fast .content-wrapper {
-  animation: xp_scroll 10s linear infinite;
+  animation: xp_scroll 10s linear infinite reverse;
   animation-delay: -10s;
 }
 .xp-text-marquee.duration-fast .content-wrapper-2 {
-  animation: xp_scroll2 10s linear infinite;
+  animation: xp_scroll2 10s linear infinite reverse;
   animation-delay: -5s;
 }
 

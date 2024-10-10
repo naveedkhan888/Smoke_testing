@@ -7935,7 +7935,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-300%);
+    transform: translateX(-200%);
   }
 }
 @keyframes xp_scroll_ltr {

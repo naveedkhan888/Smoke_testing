@@ -925,6 +925,10 @@ td {
   backdrop-filter: blur(13px);
 }
 
+.blur_background {
+  backdrop-filter: blur(13px);
+}
+
 
 .rotate_anim svg {
     animation: rotate 20s linear infinite;

@@ -927,6 +927,7 @@ td {
 
 .blur_background {
   backdrop-filter: blur(13px);
+  border-radius: 50%;
 }
 
 

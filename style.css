@@ -1051,7 +1051,8 @@ td {
   color: #fff;
 }
 
-.main-form input::-webkit-input-placeholder { /* Chrome, Safari, Edge */
+.main-form input::-webkit-input-placeholder, 
+.main-form textarea::-webkit-textarea-placeholder { /* Chrome, Safari, Edge */
   color: #ffffff;
   opacity: 1;
 }

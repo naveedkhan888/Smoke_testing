@@ -7924,7 +7924,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 
 @keyframes xp_scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);
@@ -7935,7 +7935,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
 }
 @keyframes xp_scroll_ltr {
@@ -7943,7 +7943,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 }
 @keyframes xp_scroll2_ltr {
@@ -7951,7 +7951,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(200%);
+    transform: translateX(100%);
   }
 }
 

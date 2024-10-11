@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Restimo_Elementor_Text_Marquee extends Widget_Base {
+class Restobar_Elementor_Text_Marquee extends Widget_Base {
 
 	public function get_name() {
-		return 'restimo_elementor_text_marquee';
+		return 'restobar_elementor_text_marquee';
 	}
 
 	public function get_title() {
-		return esc_html__( 'Text Marquee', 'restimo' );
+		return esc_html__( 'Text Marquee', 'restobar' );
 	}
 
 	public function get_icon() {
@@ -18,7 +18,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'restimo' ];
+		return [ 'restobar' ];
 	}
 
 	public function get_script_depends() {
@@ -31,14 +31,14 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => esc_html__( 'Content', 'restimo' ),
+				'label' => esc_html__( 'Content', 'restobar' ),
 			]
 		);	
 
 			$this->add_control(
 				'icon',
 				[
-					'label' => esc_html__( 'Icon', 'restimo' ),
+					'label' => esc_html__( 'Icon', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::ICONS,
 					'default' => [
 						'value' => 'flaticon flaticon-flower',
@@ -52,9 +52,9 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$repeater->add_control(
 				'text',
 				[
-					'label' => esc_html__( 'Text', 'restimo' ),
+					'label' => esc_html__( 'Text', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::TEXTAREA,
-					'default' => esc_html__( 'Your Text' , 'restimo' ),
+					'default' => esc_html__( 'Your Text' , 'restobar' ),
 					'show_label' => true,
 				]
 			);
@@ -70,7 +70,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$repeater->add_control(
 				'color',
 				[
-					'label' => esc_html__( 'Color', 'restimo' ),
+					'label' => esc_html__( 'Color', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} {{CURRENT_ITEM}}' => 'color: {{VALUE}}',
@@ -81,21 +81,21 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'items',
 				[
-					'label' => esc_html__( 'Items', 'restimo' ),
+					'label' => esc_html__( 'Items', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::REPEATER,
 					'fields' => $repeater->get_controls(),
 					'default' => [
 						[
-							'text' => esc_html__( '100% Natural & Paraben-Free','restimo' ),
+							'text' => esc_html__( '100% Natural & Paraben-Free','restobar' ),
 						],
 						[
-							'text' => esc_html__( 'Get 20% Off For Your First Order','restimo' ),
+							'text' => esc_html__( 'Get 20% Off For Your First Order','restobar' ),
 						],
 						[
-							'text' => esc_html__( 'No Artificial Fragrances', 'restimo' ),
+							'text' => esc_html__( 'No Artificial Fragrances', 'restobar' ),
 						],
 						[
-							'text' => esc_html__( 'Completely Aluminum Free', 'restimo' ),
+							'text' => esc_html__( 'Completely Aluminum Free', 'restobar' ),
 						],
 					],
 				]
@@ -106,7 +106,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'general_section_style',
 			[
-				'label' => esc_html__( 'General', 'restimo' ),
+				'label' => esc_html__( 'General', 'restobar' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -123,7 +123,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'general_opacity',
 				[
-					'label' => esc_html__( 'Opacity', 'restimo' ),
+					'label' => esc_html__( 'Opacity', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -142,7 +142,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'general_padding',
 				[
-					'label' => esc_html__( 'Padding', 'restimo' ),
+					'label' => esc_html__( 'Padding', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em', 'rem' ],
 					'selectors' => [
@@ -156,7 +156,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'icon_section_style',
 			[
-				'label' => esc_html__( 'Icon', 'restimo' ),
+				'label' => esc_html__( 'Icon', 'restobar' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -164,7 +164,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'icon_size',
 				[
-					'label' => esc_html__( 'Size', 'restimo' ),
+					'label' => esc_html__( 'Size', 'restobar' ),
 					'type' => Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -184,7 +184,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'icon_color',
 				[
-					'label' => esc_html__( 'Color', 'restimo' ),
+					'label' => esc_html__( 'Color', 'restobar' ),
 					'type' => Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} .xp-text-marquee .icon i' => 'color : {{VALUE}};',
@@ -196,7 +196,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'icon_margin',
 				[
-					'label' => esc_html__( 'Margin', 'restimo' ),
+					'label' => esc_html__( 'Margin', 'restobar' ),
 					'type' => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', 'em', '%' ],
 					'selectors' => [
@@ -210,7 +210,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'text_section_style',
 			[
-				'label' => esc_html__( 'Text', 'restimo' ),
+				'label' => esc_html__( 'Text', 'restobar' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -226,7 +226,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'text_color',
 				[
-					'label' => esc_html__( 'Color', 'restimo' ),
+					'label' => esc_html__( 'Color', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} .xp-text-marquee .content .text' => 'color: {{VALUE}}',
@@ -237,7 +237,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'text_wrapper_width',
 				[
-					'label' => esc_html__( 'Width (%)', 'restimo' ),
+					'label' => esc_html__( 'Width (%)', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ '%' ],
 					'range' => [
@@ -259,7 +259,7 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'space_between',
 				[
-					'label' => esc_html__( 'Space Between', 'restimo' ),
+					'label' => esc_html__( 'Space Between', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%', 'em', 'rem' ],
 					'range' => [
@@ -282,13 +282,13 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'time_duration',
 				[
-					'label' => esc_html__( 'Time Duration', 'restimo' ),
+					'label' => esc_html__( 'Time Duration', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'normal',
 					'options' => [
-						'slow' => esc_html__( 'Slow', 'restimo' ),
-						'normal' => esc_html__( 'Normal', 'restimo' ),
-						'fast' => esc_html__( 'Fast', 'restimo' ),
+						'slow' => esc_html__( 'Slow', 'restobar' ),
+						'normal' => esc_html__( 'Normal', 'restobar' ),
+						'fast' => esc_html__( 'Fast', 'restobar' ),
 					],
 				]
 			);
@@ -296,12 +296,12 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'direction',
 				[
-					'label' => esc_html__( 'Direction', 'restimo' ),
+					'label' => esc_html__( 'Direction', 'restobar' ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'rtl',
 					'options' => [
-						'ltr' => esc_html__( 'Left to Right', 'restimo' ),
-						'rtl' => esc_html__( 'Right to Left', 'restimo' ),
+						'ltr' => esc_html__( 'Left to Right', 'restobar' ),
+						'rtl' => esc_html__( 'Right to Left', 'restobar' ),
 					],
 				]
 			);
@@ -371,4 +371,4 @@ class Restimo_Elementor_Text_Marquee extends Widget_Base {
 
 	
 }
-Plugin::instance()->widgets_manager->register_widget_type( new Restimo_Elementor_Text_Marquee() );
+Plugin::instance()->widgets_manager->register_widget_type( new Restobar_Elementor_Text_Marquee() );

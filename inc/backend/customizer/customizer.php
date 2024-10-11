@@ -2,7 +2,7 @@
 /**
  * Theme customizer
  *
- * @package Restimo
+ * @package Restobar
  */
 
 // Exit if accessed directly
@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Restimo_Customize {
+class Restobar_Customize {
 	/**
 	 * Customize settings
 	 *
@@ -128,18 +128,18 @@ class Restimo_Customize {
  *
  * @return bool|string
  */
-function restimo_get_option( $name ) {
-	global $restimo_customize;
+function restobar_get_option( $name ) {
+	global $restobar_customize;
 
 	$value = false;
 
 	if ( class_exists( 'Kirki' ) ) {
-		$value = Kirki::get_option( 'restimo', $name );
-	} elseif ( ! empty( $restimo_customize ) ) {
-		$value = $restimo_customize->get_option( $name );
+		$value = Kirki::get_option( 'restobar', $name );
+	} elseif ( ! empty( $restobar_customize ) ) {
+		$value = $restobar_customize->get_option( $name );
 	}
 
-	return apply_filters( 'restimo_get_option', $value, $name );
+	return apply_filters( 'restobar_get_option', $value, $name );
 }
 
 /**
@@ -149,14 +149,14 @@ function restimo_get_option( $name ) {
  *
  * @return mixed
  */
-function restimo_get_option_default( $name ) {
-	global $restimo_customize;
+function restobar_get_option_default( $name ) {
+	global $restobar_customize;
 
-	if ( empty( $restimo_customize ) ) {
+	if ( empty( $restobar_customize ) ) {
 		return false;
 	}
 
-	return $restimo_customize->get_option_default( $name );
+	return $restobar_customize->get_option_default( $name );
 }
 
 /**
@@ -164,12 +164,12 @@ function restimo_get_option_default( $name ) {
  *
  * @param object $wp_customize
  */
-function restimo_customize_modify( $wp_customize ) {
+function restobar_customize_modify( $wp_customize ) {
 	$wp_customize->get_section( 'title_tagline' )->panel     = 'general';
 	$wp_customize->get_section( 'static_front_page' )->panel = 'general';
 }
 
-add_action( 'customize_register', 'restimo_customize_modify' );
+add_action( 'customize_register', 'restobar_customize_modify' );
 
 
 /**
@@ -180,27 +180,27 @@ add_action( 'customize_register', 'restimo_customize_modify' );
  *
  * @return array
  */
-function restimo_customize_settings() {
+function restobar_customize_settings() {
 	/**
 	 * Customizer configuration
 	 */
 
 	$settings = array(
-		'theme' => 'restimo',
+		'theme' => 'restobar',
 	);
 
 	$panels = array(
 		'general'         => array(
 			'priority'    => 5,
-			'title'       => esc_html__( 'General', 'restimo' ),
+			'title'       => esc_html__( 'General', 'restobar' ),
         ),
         'blog'        => array(
-			'title'      => esc_html__( 'Blog', 'restimo' ),
+			'title'      => esc_html__( 'Blog', 'restobar' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
         'portfolio'       => array(
-			'title'       => esc_html__( 'Portfolio', 'restimo' ),
+			'title'       => esc_html__( 'Portfolio', 'restobar' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',			
 		),
@@ -209,28 +209,28 @@ function restimo_customize_settings() {
 	$sections = array(
         /* header */
         'main_header'     => array(
-            'title'       => esc_html__( 'Header', 'restimo' ),
+            'title'       => esc_html__( 'Header', 'restobar' ),
             'description' => '',
             'priority'    => 8,
             'capability'  => 'edit_theme_options',
         ),
         /* page header */
         'page_header'     => array(
-            'title'       => esc_html__( 'Page Header', 'restimo' ),
+            'title'       => esc_html__( 'Page Header', 'restobar' ),
             'description' => '',
             'priority'    => 9,
             'capability'  => 'edit_theme_options',
         ),
         /* blog */
         'blog_page'           => array(
-			'title'       => esc_html__( 'Blog Page', 'restimo' ),
+			'title'       => esc_html__( 'Blog Page', 'restobar' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'blog',
 		),
         'single_post'           => array(
-			'title'       => esc_html__( 'Single Post', 'restimo' ),
+			'title'       => esc_html__( 'Single Post', 'restobar' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
@@ -238,46 +238,46 @@ function restimo_customize_settings() {
         ),
         /* footer */
         'footer'         => array(
-			'title'      => esc_html__( 'Footer', 'restimo' ),
+			'title'      => esc_html__( 'Footer', 'restobar' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
         /* portfolio */
         'portfolio_page'  => array(
-			'title'       => esc_html__( 'Archive Page', 'restimo' ),
+			'title'       => esc_html__( 'Archive Page', 'restobar' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'portfolio',			
 		),
 		'portfolio_post'  => array(
-			'title'       => esc_html__( 'Single Page', 'restimo' ),
+			'title'       => esc_html__( 'Single Page', 'restobar' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'portfolio',			
 		),
 		/* typography */
 		'typography'           => array(
-            'title'       => esc_html__( 'Typography', 'restimo' ),
+            'title'       => esc_html__( 'Typography', 'restobar' ),
             'description' => '',
             'priority'    => 15,
             'capability'  => 'edit_theme_options',
         ),
 		/* 404 */
 		'error_404'       => array(
-            'title'       => esc_html__( '404', 'restimo' ),
+            'title'       => esc_html__( '404', 'restobar' ),
             'description' => '',
             'priority'    => 11,
             'capability'  => 'edit_theme_options',
         ),
         /* color scheme */
         'color_scheme'   => array(
-			'title'      => esc_html__( 'Color Scheme', 'restimo' ),
+			'title'      => esc_html__( 'Color Scheme', 'restobar' ),
 			'priority'   => 200,
 			'capability' => 'edit_theme_options',
 		),
 		/* js code */
 		'script_code'   => array(
-			'title'      => esc_html__( 'Google Analytics(Script Code)', 'restimo' ),
+			'title'      => esc_html__( 'Google Analytics(Script Code)', 'restobar' ),
 			'priority'   => 210,
 			'capability' => 'edit_theme_options',
 		),
@@ -287,47 +287,47 @@ function restimo_customize_settings() {
         /* header settings */
 		'header_layout'   => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Header Desktop', 'restimo' ), 
-	 		'description' => esc_attr__( 'Choose the header on desktop.', 'restimo' ), 
+	 		'label'       => esc_attr__( 'Select Header Desktop', 'restobar' ), 
+	 		'description' => esc_attr__( 'Choose the header on desktop.', 'restobar' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 3,
-	 		'placeholder' => esc_attr__( 'Select a header', 'restimo' ), 
+	 		'placeholder' => esc_attr__( 'Select a header', 'restobar' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
 		),
 		'header_fixed'    => array(
             'type'        => 'toggle',
-			'label'       => esc_html__( 'Header Transparent?', 'restimo' ),
-	 		'description' => esc_attr__( 'Enable when your header is transparent.', 'restimo' ), 
+			'label'       => esc_html__( 'Header Transparent?', 'restobar' ),
+	 		'description' => esc_attr__( 'Enable when your header is transparent.', 'restobar' ), 
             'section'     => 'main_header',
 			'default'     => '1',
 			'priority'    => 4,
         ),
         'header_mobile'   => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Header Mobile', 'restimo' ), 
-	 		'description' => esc_attr__( 'Choose the header on mobile.', 'restimo' ), 
+	 		'label'       => esc_attr__( 'Select Header Mobile', 'restobar' ), 
+	 		'description' => esc_attr__( 'Choose the header on mobile.', 'restobar' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 5,
-	 		'placeholder' => esc_attr__( 'Select a header', 'restimo' ), 
+	 		'placeholder' => esc_attr__( 'Select a header', 'restobar' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
         ),
         'is_sidepanel'    => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Side Panel for all site?', 'restimo' ),
+            'label'       => esc_html__( 'Side Panel for all site?', 'restobar' ),
             'section'     => 'main_header',
             'default'     => '1',
             'priority'    => 6,
         ),
         'sidepanel_layout'     => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Side Panel', 'restimo' ), 
-	 		'description' => esc_attr__( 'Choose the side panel on header.', 'restimo' ), 
+	 		'label'       => esc_attr__( 'Select Side Panel', 'restobar' ), 
+	 		'description' => esc_attr__( 'Choose the side panel on header.', 'restobar' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 6,
-	 		'placeholder' => esc_attr__( 'Select a panel', 'restimo' ), 
+	 		'placeholder' => esc_attr__( 'Select a panel', 'restobar' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
             'active_callback' => array(
                 array(
@@ -339,7 +339,7 @@ function restimo_customize_settings() {
 		),
 		'panel_left'     => array(
             'type'        => 'toggle',
-			'label'       => esc_html__( 'Side Panel On Left', 'restimo' ),
+			'label'       => esc_html__( 'Side Panel On Left', 'restobar' ),
             'section'     => 'main_header',
 			'default'     => '0',
 			'priority'    => 7,
@@ -359,14 +359,14 @@ function restimo_customize_settings() {
         /*page header */
         'pheader_switch'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Page Header On/Off', 'restimo' ),
+            'label'       => esc_html__( 'Page Header On/Off', 'restobar' ),
             'section'     => 'page_header',
             'default'     => 1,
             'priority'    => 10,
         ),
         'breadcrumbs'     => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Breadcrumbs On/Off', 'restimo' ),
+            'label'       => esc_html__( 'Breadcrumbs On/Off', 'restobar' ),
             'section'     => 'page_header',
             'default'     => 1,
             'priority'    => 10,
@@ -380,7 +380,7 @@ function restimo_customize_settings() {
         ),
         'left_bread'     => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Breadcrumbs On Left', 'restimo' ),
+            'label'       => esc_html__( 'Breadcrumbs On Left', 'restobar' ),
             'section'     => 'page_header',
             'default'     => 0,
             'priority'    => 10,
@@ -399,7 +399,7 @@ function restimo_customize_settings() {
         ),
         'pheader_img'  => array(
             'type'     => 'image',
-            'label'    => esc_html__( 'Background Image', 'restimo' ),
+            'label'    => esc_html__( 'Background Image', 'restobar' ),
             'section'  => 'page_header',
             'default'  => '',
             'priority' => 10,
@@ -419,7 +419,7 @@ function restimo_customize_settings() {
         ),
         'pheader_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'restimo' ),
+            'label'    => esc_html__( 'Background Color', 'restobar' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -438,7 +438,7 @@ function restimo_customize_settings() {
         ),
         'ptitle_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Title Color', 'restimo' ),
+            'label'    => esc_html__( 'Title Color', 'restobar' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -457,7 +457,7 @@ function restimo_customize_settings() {
         ),
         'bread_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Breadcrumbs Color', 'restimo' ),
+            'label'    => esc_html__( 'Breadcrumbs Color', 'restobar' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -481,14 +481,14 @@ function restimo_customize_settings() {
         ),
         'pheader_height'  => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'restimo' ),
+            'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'restobar' ),
             'section'  => 'page_header',
             'transport' => 'auto',
             'priority' => 10,
             'choices'   => array(
-                'desktop' => esc_attr__( 'Desktop', 'restimo' ),
-                'tablet'  => esc_attr__( 'Tablet', 'restimo' ),
-                'mobile'  => esc_attr__( 'Mobile', 'restimo' ),
+                'desktop' => esc_attr__( 'Desktop', 'restobar' ),
+                'tablet'  => esc_attr__( 'Tablet', 'restobar' ),
+                'mobile'  => esc_attr__( 'Mobile', 'restobar' ),
             ),
             'output'   => array(
                 array(
@@ -525,14 +525,14 @@ function restimo_customize_settings() {
         ),
         'head_size'  => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Page Title Size (Ex: 30px)', 'restimo' ),
+            'label'    => esc_html__( 'Page Title Size (Ex: 30px)', 'restobar' ),
             'section'  => 'page_header',
             'transport' => 'auto',
             'priority' => 10,
             'choices'   => array(
-                'desktop' => esc_attr__( 'Desktop', 'restimo' ),
-                'tablet'  => esc_attr__( 'Tablet', 'restimo' ),
-                'mobile'  => esc_attr__( 'Mobile', 'restimo' ),
+                'desktop' => esc_attr__( 'Desktop', 'restobar' ),
+                'tablet'  => esc_attr__( 'Tablet', 'restobar' ),
+                'mobile'  => esc_attr__( 'Mobile', 'restobar' ),
             ),
             'output'   => array(
                 array(
@@ -570,11 +570,11 @@ function restimo_customize_settings() {
         /* blog settings */
 		'blog_layout'           => array(
 			'type'        => 'radio-image',
-			'label'       => esc_html__( 'Blog Layout', 'restimo' ),
+			'label'       => esc_html__( 'Blog Layout', 'restobar' ),
 			'section'     => 'blog_page',
 			'default'     => 'content-sidebar',
 			'priority'    => 7,
-			'description' => esc_html__( 'Select default sidebar for the blog page.', 'restimo' ),
+			'description' => esc_html__( 'Select default sidebar for the blog page.', 'restobar' ),
 			'choices'     => array(
 				'content-sidebar' 	=> get_template_directory_uri() . '/inc/backend/images/right.png',
 				'sidebar-content' 	=> get_template_directory_uri() . '/inc/backend/images/left.png',
@@ -583,27 +583,27 @@ function restimo_customize_settings() {
 		),
         'blog_style'           => array(
             'type'        => 'select',
-            'label'       => esc_html__( 'Blog Style', 'restimo' ),
+            'label'       => esc_html__( 'Blog Style', 'restobar' ),
             'section'     => 'blog_page',
             'default'     => 'list',
             'priority'    => 8,
-            'description' => esc_html__( 'Select style default for the blog page.', 'restimo' ),
+            'description' => esc_html__( 'Select style default for the blog page.', 'restobar' ),
             'choices'     => array(
-                'list' => esc_attr__( 'Blog List', 'restimo' ),
-                'grid' => esc_attr__( 'Blog Grid', 'restimo' ),
+                'list' => esc_attr__( 'Blog List', 'restobar' ),
+                'grid' => esc_attr__( 'Blog Grid', 'restobar' ),
             ),
         ),
         'blog_columns'           => array(
             'type'        => 'select',
-            'label'       => esc_html__( 'Blog Columns', 'restimo' ),
+            'label'       => esc_html__( 'Blog Columns', 'restobar' ),
             'section'     => 'blog_page',
             'default'     => 'pf_2_cols',
             'priority'    => 8,
-            'description' => esc_html__( 'Select columns default for the blog page.', 'restimo' ),
+            'description' => esc_html__( 'Select columns default for the blog page.', 'restobar' ),
             'choices'     => array(
-                'pf_2_cols' => esc_attr__( '2 Columns', 'restimo' ),
-                'pf_3_cols' => esc_attr__( '3 Columns', 'restimo' ),
-                'pf_4_cols' => esc_attr__( '4 Columns', 'restimo' ),
+                'pf_2_cols' => esc_attr__( '2 Columns', 'restobar' ),
+                'pf_3_cols' => esc_attr__( '3 Columns', 'restobar' ),
+                'pf_4_cols' => esc_attr__( '4 Columns', 'restobar' ),
             ),
             'active_callback' => array(
                 array(
@@ -615,20 +615,20 @@ function restimo_customize_settings() {
         ),	
 		'post_entry_meta'              => array(
             'type'     => 'multicheck',
-            'label'    => esc_html__( 'Entry Meta', 'restimo' ),
+            'label'    => esc_html__( 'Entry Meta', 'restobar' ),
             'section'  => 'blog_page',
             'default'  => array( 'date', 'author', 'comm' ),
             'choices'  => array(
-                'date'    => esc_html__( 'Date', 'restimo' ),
-                'author'  => esc_html__( 'Author', 'restimo' ),
-                'comm'    => esc_html__( 'Comment', 'restimo' ),
+                'date'    => esc_html__( 'Date', 'restobar' ),
+                'author'  => esc_html__( 'Author', 'restobar' ),
+                'comm'    => esc_html__( 'Comment', 'restobar' ),
             ),
             'priority' => 10,
         ),
         /* single blog */
         'single_post_layout'           => array(
             'type'        => 'radio-image',
-            'label'       => esc_html__( 'Layout', 'restimo' ),
+            'label'       => esc_html__( 'Layout', 'restobar' ),
             'section'     => 'single_post',
             'default'     => 'content-sidebar',
             'priority'    => 10,
@@ -640,14 +640,14 @@ function restimo_customize_settings() {
         ),
         'ptitle_post'               => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Page Title', 'restimo' ),
+			'label'           => esc_html__( 'Page Title', 'restobar' ),
 			'section'         => 'single_post',
-			'default'         => esc_html__( 'Blog Single', 'restimo' ),
+			'default'         => esc_html__( 'Blog Single', 'restobar' ),
 			'priority'        => 10,
 		),
 		'single_separator1'     => array(
 			'type'        => 'custom',
-			'label'       => esc_html__( 'Social Share', 'restimo' ),
+			'label'       => esc_html__( 'Social Share', 'restobar' ),
 			'section'     => 'single_post',
 			'default'     => '<hr>',
 			'priority'    => 10,
@@ -657,41 +657,41 @@ function restimo_customize_settings() {
             'section'  => 'single_post',
             'default'  => array( 'twitter', 'facebook', 'pinterest', 'linkedin' ),
             'choices'  => array(
-                'twit'  	=> esc_html__( 'Twitter', 'restimo' ),
-                'face'    	=> esc_html__( 'Facebook', 'restimo' ),
-                'pint'     	=> esc_html__( 'Pinterest', 'restimo' ),
-                'link'     	=> esc_html__( 'Linkedin', 'restimo' ),
-                'google'  	=> esc_html__( 'Google Plus', 'restimo' ),
-                'tumblr'    => esc_html__( 'Tumblr', 'restimo' ),
-                'reddit'    => esc_html__( 'Reddit', 'restimo' ),
-                'vk'     	=> esc_html__( 'VK', 'restimo' ),
+                'twit'  	=> esc_html__( 'Twitter', 'restobar' ),
+                'face'    	=> esc_html__( 'Facebook', 'restobar' ),
+                'pint'     	=> esc_html__( 'Pinterest', 'restobar' ),
+                'link'     	=> esc_html__( 'Linkedin', 'restobar' ),
+                'google'  	=> esc_html__( 'Google Plus', 'restobar' ),
+                'tumblr'    => esc_html__( 'Tumblr', 'restobar' ),
+                'reddit'    => esc_html__( 'Reddit', 'restobar' ),
+                'vk'     	=> esc_html__( 'VK', 'restobar' ),
             ),
             'priority' => 10,
         ),
         'single_separator2'     => array(
 			'type'        => 'custom',
-			'label'       => esc_html__( 'Entry Footer', 'restimo' ),
+			'label'       => esc_html__( 'Entry Footer', 'restobar' ),
 			'section'     => 'single_post',
 			'default'     => '<hr>',
 			'priority'    => 10,
 		),
         'author_box'      => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Author Info Box', 'restimo' ),
+			'label'       => esc_attr__( 'Author Info Box', 'restobar' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
 		),
 		'post_nav'     	  => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Post Navigation', 'restimo' ),
+			'label'       => esc_attr__( 'Post Navigation', 'restobar' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
 		),
 		'related_post'    => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Related Posts', 'restimo' ),
+			'label'       => esc_attr__( 'Related Posts', 'restobar' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
@@ -699,20 +699,20 @@ function restimo_customize_settings() {
         /* project settings */
 		'portfolio_archive'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Portfolio Archive', 'restimo' ),
+			'label'       => esc_html__( 'Portfolio Archive', 'restobar' ),
 			'section'     => 'portfolio_page',
 			'default'     => 'archive_default',
 			'priority'    => 1,
-			'description' => esc_html__( 'Select page default for the portfolio archive page.', 'restimo' ),
+			'description' => esc_html__( 'Select page default for the portfolio archive page.', 'restobar' ),
 			'choices'     => array(
-				'archive_default' => esc_attr__( 'Archive page default', 'restimo' ),
-				'archive_custom' => esc_attr__( 'Archive page custom', 'restimo' ),
+				'archive_default' => esc_attr__( 'Archive page default', 'restobar' ),
+				'archive_custom' => esc_attr__( 'Archive page custom', 'restobar' ),
 			),
 		),
 		'archive_page_custom'     => array(
 			'type'        => 'dropdown-pages',  
-	 		'label'       => esc_attr__( 'Select Page', 'restimo' ), 
-	 		'description' => esc_attr__( 'Choose a custom page for archive portfolio page.', 'restimo' ), 
+	 		'label'       => esc_attr__( 'Select Page', 'restobar' ), 
+	 		'description' => esc_attr__( 'Choose a custom page for archive portfolio page.', 'restobar' ), 
 	 		'section'     => 'portfolio_page', 
 	 		'default'     => '', 
 	 		'priority'    => 2,	 		
@@ -726,15 +726,15 @@ function restimo_customize_settings() {
 		),
 		'portfolio_column'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Portfolio Columns', 'restimo' ),
+			'label'       => esc_html__( 'Portfolio Columns', 'restobar' ),
 			'section'     => 'portfolio_page',
 			'default'     => '3cl',
 			'priority'    => 3,
-			'description' => esc_html__( 'Select default column for the portfolio page.', 'restimo' ),
+			'description' => esc_html__( 'Select default column for the portfolio page.', 'restobar' ),
 			'choices'     => array(
-				'2cl' => esc_attr__( '2 Column', 'restimo' ),
-				'3cl' => esc_attr__( '3 Column', 'restimo' ),
-				'4cl' => esc_attr__( '4 Column', 'restimo' ),
+				'2cl' => esc_attr__( '2 Column', 'restobar' ),
+				'3cl' => esc_attr__( '3 Column', 'restobar' ),
+				'4cl' => esc_attr__( '4 Column', 'restobar' ),
 			),
 			'active_callback' => array(
 				array(
@@ -746,15 +746,15 @@ function restimo_customize_settings() {
 		),
 		'portfolio_style'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Hover Style', 'restimo' ),
+			'label'       => esc_html__( 'Hover Style', 'restobar' ),
 			'section'     => 'portfolio_page',
 			'default'     => 'style1',
 			'priority'    => 4,
-			'description' => esc_html__( 'Select default style for the portfolio page.', 'restimo' ),
+			'description' => esc_html__( 'Select default style for the portfolio page.', 'restobar' ),
 			'choices'     => array(
-				'style1' => esc_attr__( 'Background Overlay', 'restimo' ),
-				'style2' => esc_attr__( 'Background Solid', 'restimo' ),
-				'style3' => esc_attr__( 'Hidden', 'restimo' ),
+				'style1' => esc_attr__( 'Background Overlay', 'restobar' ),
+				'style2' => esc_attr__( 'Background Solid', 'restobar' ),
+				'style3' => esc_attr__( 'Hidden', 'restobar' ),
 			),
 			'active_callback' => array(
 				array(
@@ -768,8 +768,8 @@ function restimo_customize_settings() {
 			'type'        => 'number',
 			'section'     => 'portfolio_page',
 			'priority'    => 5,
-			'label'       => esc_html__( 'Posts per page', 'restimo' ),			
-			'description' => esc_html__( 'Change Posts Per Page for Portfolio Archive, Taxonomy.', 'restimo' ),
+			'label'       => esc_html__( 'Posts per page', 'restobar' ),			
+			'description' => esc_html__( 'Change Posts Per Page for Portfolio Archive, Taxonomy.', 'restobar' ),
 			'default'     => '',
 			'active_callback' => array(
 				array(
@@ -781,23 +781,23 @@ function restimo_customize_settings() {
 		),
 		'pf_nav'     	  => array(
 			'type'        => 'toggle',
-			'label'       => esc_attr__( 'Projects Navigation On/Off', 'restimo' ),
+			'label'       => esc_attr__( 'Projects Navigation On/Off', 'restobar' ),
 			'section'     => 'portfolio_post',
 			'default'     => 1,
 			'priority'    => 7,
 		),
 		'pf_related_switch'     => array(
 			'type'        => 'toggle',
-			'label'       => esc_attr__( 'Related Projects On/Off', 'restimo' ),
+			'label'       => esc_attr__( 'Related Projects On/Off', 'restobar' ),
 			'section'     => 'portfolio_post',
 			'default'     => 1,
 			'priority'    => 7,
 		),
 		'pf_related_text'      => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Related Projects Heading', 'restimo' ),
+			'label'           => esc_html__( 'Related Projects Heading', 'restobar' ),
 			'section'         => 'portfolio_post',
-			'default'         => esc_html__( 'Related Projects', 'restimo' ),
+			'default'         => esc_html__( 'Related Projects', 'restobar' ),
 			'priority'        => 7,
 			'active_callback' => array(
 				array(
@@ -810,17 +810,17 @@ function restimo_customize_settings() {
         /* footer settings */
 		'footer_layout'     => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Footer', 'restimo' ), 
-	 		'description' => esc_attr__( 'Choose a footer for all site here.', 'restimo' ), 
+	 		'label'       => esc_attr__( 'Select Footer', 'restobar' ), 
+	 		'description' => esc_attr__( 'Choose a footer for all site here.', 'restobar' ), 
 	 		'section'     => 'footer', 
 	 		'default'     => '', 
 	 		'priority'    => 1,
-	 		'placeholder' => esc_attr__( 'Select a footer', 'restimo' ), 
+	 		'placeholder' => esc_attr__( 'Select a footer', 'restobar' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_footer_builders', 'posts_per_page' => -1 ) ) : array(),
 		),
         'footer_fixed'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Footer Fixed On/Off?', 'restimo' ),
+            'label'       => esc_html__( 'Footer Fixed On/Off?', 'restobar' ),
             'section'     => 'footer',
             'default'     => 0,
             'priority'    => 2,
@@ -834,14 +834,14 @@ function restimo_customize_settings() {
 		),
 		'backtotop'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Back To Top On/Off?', 'restimo' ),
+            'label'       => esc_html__( 'Back To Top On/Off?', 'restobar' ),
             'section'     => 'footer',
             'default'     => 1,
             'priority'    => 4,
         ),
         'bg_backtotop'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'restimo' ),
+            'label'    => esc_html__( 'Background Color', 'restobar' ),
             'section'  => 'footer',
             'priority' => 5,
             'default'     => '',
@@ -861,7 +861,7 @@ function restimo_customize_settings() {
         ),
         'color_backtotop' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Color', 'restimo' ),
+            'label'    => esc_html__( 'Color', 'restobar' ),
             'section'  => 'footer',
             'priority' => 6,
             'default'     => '',
@@ -881,7 +881,7 @@ function restimo_customize_settings() {
         ),
         'spacing_backtotop' => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Spacing', 'restimo' ),
+            'label'    => esc_html__( 'Spacing', 'restobar' ),
             'section'  => 'footer',
             'priority' => 7,
             'default'     => array(
@@ -890,8 +890,8 @@ function restimo_customize_settings() {
 			),
 			'choices'     => array(
 				'labels' => array(
-					'bottom'  => esc_html__( 'Bottom (Ex: 20px)', 'restimo' ),
-					'right'   => esc_html__( 'Right (Ex: 20px)', 'restimo' ),
+					'bottom'  => esc_html__( 'Bottom (Ex: 20px)', 'restobar' ),
+					'right'   => esc_html__( 'Right (Ex: 20px)', 'restobar' ),
 				),
 			),
             'output'    => array(
@@ -917,7 +917,7 @@ function restimo_customize_settings() {
 		/* typography */
         'body_typo'    => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Body Font 1', 'restimo' ),
+            'label'    => esc_html__( 'Body Font 1', 'restobar' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -936,7 +936,7 @@ function restimo_customize_settings() {
         ),
         'second_font'    => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Body Font 2', 'restimo' ),
+            'label'    => esc_html__( 'Body Font 2', 'restobar' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -945,7 +945,7 @@ function restimo_customize_settings() {
         ),
         'heading1_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 1', 'restimo' ),
+            'label'    => esc_html__( 'Heading 1', 'restobar' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -964,7 +964,7 @@ function restimo_customize_settings() {
         ),
         'heading2_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 2', 'restimo' ),
+            'label'    => esc_html__( 'Heading 2', 'restobar' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -983,7 +983,7 @@ function restimo_customize_settings() {
         ),
         'heading3_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 3', 'restimo' ),
+            'label'    => esc_html__( 'Heading 3', 'restobar' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1002,7 +1002,7 @@ function restimo_customize_settings() {
         ),
         'heading4_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 4', 'restimo' ),
+            'label'    => esc_html__( 'Heading 4', 'restobar' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1021,7 +1021,7 @@ function restimo_customize_settings() {
         ),
         'heading5_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 5', 'restimo' ),
+            'label'    => esc_html__( 'Heading 5', 'restobar' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1040,7 +1040,7 @@ function restimo_customize_settings() {
         ),
         'heading6_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 6', 'restimo' ),
+            'label'    => esc_html__( 'Heading 6', 'restobar' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1061,9 +1061,9 @@ function restimo_customize_settings() {
 		/* 404 */
 		'page_404'   	  => array(
 			'type'        => 'dropdown-pages',  
-	 		'label'       => esc_attr__( 'Select Page', 'restimo' ), 
-	 		'description' => esc_attr__( 'Choose a custom page for page 404.', 'restimo' ),
-	 		'placeholder' => esc_attr__( 'Select a page 404', 'restimo' ), 
+	 		'label'       => esc_attr__( 'Select Page', 'restobar' ), 
+	 		'description' => esc_attr__( 'Choose a custom page for page 404.', 'restobar' ),
+	 		'placeholder' => esc_attr__( 'Select a page 404', 'restobar' ), 
 	 		'section'     => 'error_404', 
 	 		'default'     => '', 
 			'priority'    => 3,
@@ -1072,7 +1072,7 @@ function restimo_customize_settings() {
 		/*color scheme*/
         'bg_body'      => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Body', 'restimo' ),
+            'label'    => esc_html__( 'Background Body', 'restobar' ),
             'section'  => 'color_scheme',
             'default'  => '',
             'priority' => 10,
@@ -1085,21 +1085,21 @@ function restimo_customize_settings() {
         ),
         'main_color'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Primary Color', 'restimo' ),
+            'label'    => esc_html__( 'Primary Color', 'restobar' ),
             'section'  => 'color_scheme',
             'default'  => '#C19977',
             'priority' => 10,
         ),
         'heading_color'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Heading Color', 'restimo' ),
+            'label'    => esc_html__( 'Heading Color', 'restobar' ),
             'section'  => 'color_scheme',
             'default'  => '#131E30',
             'priority' => 10,
         ),
         'btn_hover_dark'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Button Hover & Dark', 'restimo' ),
+            'label'    => esc_html__( 'Button Hover & Dark', 'restobar' ),
             'section'  => 'color_scheme',
             'default'  => '#131E30',
             'priority' => 10,
@@ -1108,7 +1108,7 @@ function restimo_customize_settings() {
         /*google atlantic*/
         'js_code'  => array(
             'type'        => 'code',
-            'label'       => esc_html__( 'Code', 'restimo' ),
+            'label'       => esc_html__( 'Code', 'restobar' ),
             'section'     => 'script_code',
             'choices'     => [
 				'language' => 'js',
@@ -1117,11 +1117,11 @@ function restimo_customize_settings() {
         ),
 		
 	);
-	$settings['panels']   = apply_filters( 'restimo_customize_panels', $panels );
-	$settings['sections'] = apply_filters( 'restimo_customize_sections', $sections );
-	$settings['fields']   = apply_filters( 'restimo_customize_fields', $fields );
+	$settings['panels']   = apply_filters( 'restobar_customize_panels', $panels );
+	$settings['sections'] = apply_filters( 'restobar_customize_sections', $sections );
+	$settings['fields']   = apply_filters( 'restobar_customize_fields', $fields );
 
 	return $settings;
 }
 
-$restimo_customize = new Restimo_Customize( restimo_customize_settings() );
+$restobar_customize = new Restobar_Customize( restobar_customize_settings() );

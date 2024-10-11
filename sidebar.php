@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Restimo
+ * @package Restobar
  */
 
-if ( restimo_get_layout() === 'full-content' ) {
+if ( restobar_get_layout() === 'full-content' ) {
 	return;
 }
 

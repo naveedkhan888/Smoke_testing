@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Restimo
+ * @package Restobar
  */
 
 get_header();
@@ -18,8 +18,8 @@ get_header();
 <div class="entry-content">
 	<div class="container">
 		<div class="row">
-			<div id="primary" class="content-area <?php restimo_content_columns(); ?>">
-				<main id="main" class="site-main <?php restimo_blog_style(); ?>">
+			<div id="primary" class="content-area <?php restobar_content_columns(); ?>">
+				<main id="main" class="site-main <?php restobar_blog_style(); ?>">
 
 				<?php
 				if ( have_posts() ) :
@@ -37,7 +37,7 @@ get_header();
 
 					endwhile;
 
-					restimo_posts_navigation();
+					restobar_posts_navigation();
 
 				else :
 

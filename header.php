@@ -19,22 +19,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-
- <style type="text/css">
- 	.tcg-smoke-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.07;
-  z-index: 999;
-  pointer-events: none;
-}
-.elementor-editor-active .tcg-smoke-cursor {
-	display: none !important;
-}
- </style>
 </head>
 
 <body <?php body_class(); ?>>

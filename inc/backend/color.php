@@ -163,6 +163,8 @@ if(!function_exists('restobar_color_scheme')){
 
 			/*Color*/
 			blockquote:before,
+			.xp-text-marquee .content-wrapper .icon i, 
+			.xp-text-marquee .content-wrapper-2 .icon i, 
 			.hl-text, 
 			.main-navigation > ul > li.current_page_item > a,
 			.main-navigation > ul > li.current-menu-parent > a,

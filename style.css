@@ -7846,6 +7846,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
+  font-family: "Merriweather", sans-serif;
   background-color: var(--primary);
   width: 100%;
   direction: ltr;

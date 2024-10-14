@@ -48,7 +48,7 @@ function restobar_register_required_plugins() {
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
         ),
         array(            
-            'name'               => esc_html__( 'Restobar Icons', 'restobar' ), // The plugin name.
+            'name'               => esc_html__( 'Restimo Icons', 'restobar' ), // The plugin name.
             'slug'               => 'icon-plugin', // The plugin slug (typically the folder name).
             'source'             => esc_url($protocol.'://dpsample.com/icon-plugin.zip'), // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.

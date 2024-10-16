@@ -668,7 +668,7 @@ mark, ins {
   -ms-transition: margin 0.3s ease;
 }
 .link-details:hover i {
-  margin-right: 4px;
+  margin-right: 12px;
 }
 
 .btn-details {

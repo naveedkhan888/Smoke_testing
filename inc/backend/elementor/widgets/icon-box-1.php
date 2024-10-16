@@ -129,7 +129,7 @@ class Restobar_IconBox1 extends Widget_Base{
 			[
 				'label' => __( 'Label Button', 'restobar' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<i class="xp-webicon-trajectory"></i> Learn More', 'restobar' ),
+				'default' => __( ' Learn More <i class="xp-webicon-trajectory"></i>', 'restobar' ),
 				'condition' => [
 					'link[url]!' => '',
 				]

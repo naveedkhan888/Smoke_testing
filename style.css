@@ -660,7 +660,7 @@ mark, ins {
   color: #C19977;
 }
 .link-details i {
-  margin-right: 8px;
+  margin-left: 8px;
   transition: margin 0.3s ease;
   -webkit-transition: margin 0.3s ease;
   -moz-transition: margin 0.3s ease;
@@ -668,7 +668,7 @@ mark, ins {
   -ms-transition: margin 0.3s ease;
 }
 .link-details:hover i {
-  margin-right: 12px;
+  margin-left: 12px;
 }
 
 .btn-details {

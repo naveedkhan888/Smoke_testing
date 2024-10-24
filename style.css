@@ -399,6 +399,9 @@ body.woocommerce-checkout h6,
 body.woocommerce h6 {
   color: #ffffff;
 }
+body.woocommerce-account .entry-content {
+  background: #fff;
+}
 
 h1 {
   font-size: 48px;

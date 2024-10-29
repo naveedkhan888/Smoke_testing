@@ -14,7 +14,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Tab Titles', 'creampoint' );
+		return __( 'XP Tab Titles', 'restobar' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_creampoint' ];
+		return [ 'category_restobar' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Titles', 'creampoint' ),
+				'label' => __( 'Titles', 'restobar' ),
 			]
 		);
 
@@ -41,7 +41,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$repeater->add_control(
 			'titles',
 			[
-				'label' => __( 'Title', 'creampoint' ),
+				'label' => __( 'Title', 'restobar' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'default' => 'Content Marketing',
 			]
@@ -49,7 +49,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$repeater->add_control(
 			'title_link',
 			[
-				'label' => __( 'Link to ID Content', 'creampoint' ),
+				'label' => __( 'Link to ID Content', 'restobar' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => '#tab-1',
 			]
@@ -59,7 +59,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$repeater->add_control(
 			'icon',
 			[
-				'label' => __( 'Icon', 'creampoint' ),
+				'label' => __( 'Icon', 'restobar' ),
 				'type' => Controls_Manager::ICONS,
 				'default' => [
 					'value' => 'fas fa-star',
@@ -81,19 +81,19 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'creampoint' ),
+				'label' => __( 'Alignment', 'restobar' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'  => [
-						'title' => __( 'Left', 'creampoint' ),
+						'title' => __( 'Left', 'restobar' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'creampoint' ),
+						'title' => __( 'Center', 'restobar' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'flex-end' => [
-						'title' => __( 'Right', 'creampoint' ),
+						'title' => __( 'Right', 'restobar' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -109,7 +109,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Style', 'creampoint' ),
+				'label' => __( 'Style', 'restobar' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -117,7 +117,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'creampoint' ),
+				'label' => __( 'Spacing', 'restobar' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -135,7 +135,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_responsive_control(
 			'padding_title',
 			[
-				'label' => __( 'Padding', 'creampoint' ),
+				'label' => __( 'Padding', 'restobar' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -146,7 +146,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'radius_title',
 			[
-				'label' => __( 'Border Radius', 'creampoint' ),
+				'label' => __( 'Border Radius', 'restobar' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -168,14 +168,14 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'Normal', 'creampoint' ),
+				'label' => __( 'Normal', 'restobar' ),
 			]
 		);
 
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'creampoint' ),
+				'label' => __( 'Color', 'restobar' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -186,7 +186,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'title_bg',
 			[
-				'label' => __( 'Background', 'creampoint' ),
+				'label' => __( 'Background', 'restobar' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -200,14 +200,14 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_title_hover',
 			[
-				'label' => __( 'Active/Hover', 'creampoint' ),
+				'label' => __( 'Active/Hover', 'restobar' ),
 			]
 		);
 
 		$this->add_control(
 			'title_active_color',
 			[
-				'label' => __( 'Color', 'creampoint' ),
+				'label' => __( 'Color', 'restobar' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -218,7 +218,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'title_active_bg',
 			[
-				'label' => __( 'Background', 'creampoint' ),
+				'label' => __( 'Background', 'restobar' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [

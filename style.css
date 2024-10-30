@@ -924,6 +924,10 @@ td {
 .border_clr.elementor-widget-divider.elementor-view-default .elementor-icon svg {
   fill: #C19977;
 }
+.border_clr.elementor-widget-divider.elementor-view-framed .elementor-icon, 
+.border_clr.elementor-widget-divider.elementor-view-default .elementor-icon {
+  color: #c19977;
+}
 .border_clr.elementor-widget-divider {
   --divider-color: #C19977; }
 .elementor-social-icons-wrapper a.elementor-social-icon {
@@ -4730,6 +4734,10 @@ object {
   gap: 10px;
   flex-direction: column;
 }
+.tab-titles .title-item a.tab-active, 
+.tab-titles .title-item a:hover {
+  color: #c19977;
+}
 
 
 @media (max-width: 767px) {
@@ -7798,6 +7806,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .food-price-menu .menu-item .content .title_priccce .price {
     flex-grow: 0;
   flex-shrink: 0;
+  color: #c19977;
   display: flex;
   justify-content: center;
   align-content: center;

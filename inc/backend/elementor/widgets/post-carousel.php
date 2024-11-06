@@ -662,11 +662,11 @@ class Restobar_Post_Carousel extends Widget_Base{
 								<?php if( !has_post_thumbnail() && $settings['show_cat'] ) restobar_posted_in(); ?>
 								<div class="entry-header">
 									<?php if( $settings['show_cat'] ) { restobar_posted_in(); } ?>		
-									<?php the_title( '<h5 class="entry-title"><a class="title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>
-									<a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>	
+									<?php the_title( '<h5 class="entry-title"><a class="title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>	
 								</div>
 
 								<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .restobar_excerpt($settings['exc']). '...</div>'; } ?>
+								<a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
 							</div>
 							<div class="entry-meta">
 								<?php if( restobar_get_option( 'post_entry_meta' ) ) { restobar_post_meta(); } ?>

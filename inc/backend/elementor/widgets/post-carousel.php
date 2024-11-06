@@ -192,7 +192,7 @@ class Restobar_Post_Carousel extends Widget_Base{
 		        'default' => 'style1',
 		    ]
 		);
-		
+
 		$this->end_controls_section();
 
 		$this->start_controls_section(
@@ -652,7 +652,6 @@ class Restobar_Post_Carousel extends Widget_Base{
 
 							<?php if ( has_post_thumbnail() ) { ?>
 								<div class="entry-media">
-									<?php if( $settings['show_cat'] ) { restobar_posted_in(); } ?>
 									<a href="<?php the_permalink(); ?>">
 										<?php the_post_thumbnail($settings['post_thumbnail']); ?>
 									</a>
@@ -662,7 +661,7 @@ class Restobar_Post_Carousel extends Widget_Base{
 							<div class="inner-post">
 								<?php if( !has_post_thumbnail() && $settings['show_cat'] ) restobar_posted_in(); ?>
 								<div class="entry-header">
-
+									<?php if( $settings['show_cat'] ) { restobar_posted_in(); } ?>		
 									<?php the_title( '<h5 class="entry-title"><a class="title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>
 
 								</div>

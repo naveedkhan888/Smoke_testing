@@ -29,19 +29,6 @@ class Restobar_Post_Carousel extends Widget_Base{
 
 	protected function register_controls() {
 
-		$this->add_control(
-		    'carousel_style',
-		    [
-		        'label' => __('Carousel Style', 'plugin-name'),
-		        'type' => \Elementor\Controls_Manager::SELECT,
-		        'options' => [
-		            'style1' => __('Style 1', 'plugin-name'),
-		            'style2' => __('Style 2', 'plugin-name'),
-		        ],
-		        'default' => 'style1',
-		    ]
-		);
-
 		//Content
 		$this->start_controls_section(
 			'content_section',
@@ -192,6 +179,20 @@ class Restobar_Post_Carousel extends Widget_Base{
 				],
 			]
 		);
+
+		$this->add_control(
+		    'carousel_style',
+		    [
+		        'label' => __('Carousel Style', 'plugin-name'),
+		        'type' => \Elementor\Controls_Manager::SELECT,
+		        'options' => [
+		            'style1' => __('Style 1', 'plugin-name'),
+		            'style2' => __('Style 2', 'plugin-name'),
+		        ],
+		        'default' => 'style1',
+		    ]
+		);
+		
 		$this->end_controls_section();
 
 		$this->start_controls_section(

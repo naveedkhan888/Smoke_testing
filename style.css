@@ -2157,8 +2157,8 @@ a:hover, a:active {
   -ms-transition: all 0.3s linear;
 }
 .post-box .inner-post .post-cat {
-  margin-top: -5px;
-  margin-bottom: 25px;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 .post-box .post-cat a {
   font-family: "Merriweather", sans-serif;

@@ -666,11 +666,12 @@ class Restobar_Post_Carousel extends Widget_Base{
 								</div>
 
 								<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .restobar_excerpt($settings['exc']). '...</div>'; } ?>
-								<a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
-							</div>
-							<div class="entry-meta">
 								<?php if( restobar_get_option( 'post_entry_meta' ) ) { restobar_post_meta(); } ?>
+								<!--<a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>--->
 							</div>
+							<!--<div class="entry-meta">
+								
+							</div>-->
 
 						</div>
 					</article>

@@ -29,6 +29,19 @@ class Restobar_Post_Carousel extends Widget_Base{
 
 	protected function register_controls() {
 
+		$this->add_control(
+		    'carousel_style',
+		    [
+		        'label' => __('Carousel Style', 'plugin-name'),
+		        'type' => \Elementor\Controls_Manager::SELECT,
+		        'options' => [
+		            'style1' => __('Style 1', 'plugin-name'),
+		            'style2' => __('Style 2', 'plugin-name'),
+		        ],
+		        'default' => 'style1',
+		    ]
+		);
+
 		//Content
 		$this->start_controls_section(
 			'content_section',
@@ -588,10 +601,12 @@ class Restobar_Post_Carousel extends Widget_Base{
 		$gaps   = isset( $settings['w_gaps']['size'] ) && is_numeric( $settings['w_gaps']['size'] ) ? $settings['w_gaps']['size'] : 30;
 		$tgaps  = isset( $settings['w_gaps_tablet']['size'] ) && is_numeric( $settings['w_gaps_tablet']['size'] ) ? $settings['w_gaps_tablet']['size'] : $gaps;
 		$mgaps  = isset( $settings['w_gaps_mobile']['size'] ) && is_numeric( $settings['w_gaps_mobile']['size'] ) ? $settings['w_gaps_mobile']['size'] : $tgaps;
+		$carousel_style = $settings['carousel_style'];
+		$carousel_class = ($carousel_style === 'style2') ? 'carousel-style-2' : 'carousel-style-1';
 
 		?>
 
-		<div class='post-slider'
+		<div class='post-slider <?php echo esc_attr($carousel_class); ?>'
     data-loop='<?php echo esc_attr( $settings['loop'] ); ?>'
     data-auto='<?php echo esc_attr( $settings['autoplay'] ); ?>'
     data-time='<?php echo esc_attr( $settings['timeout']['size'] ); ?>'

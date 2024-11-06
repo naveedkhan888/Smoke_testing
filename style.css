@@ -2124,7 +2124,6 @@ a:hover, a:active {
   -ms-transition: all 0.3s linear;
 }
 .post-box .post-inner {
-  background: #090C0F;
   margin-bottom: 60px;
   overflow: hidden;
   -webkit-border-radius: 5px;
@@ -5526,7 +5525,7 @@ object {
   margin-bottom: 0;
 }
 .post-slider .post-box .inner-post {
-  padding: 32px 30px 26px;
+  padding: 20px 0 0 0;
 }
 .post-slider .post-box h5 {
   margin-bottom: 0;
@@ -5534,6 +5533,13 @@ object {
 .post-slider .post-box .entry-meta {
   padding: 14px 30px;
 }
+
+.post-slider .post-box .entry-meta.style_2 {
+  padding: 0;
+  border: 0;
+  margin: 15px 0 0 0;
+}
+
 .post-slider .post-box .entry-meta .btn-details {
   right: 8px;
 }

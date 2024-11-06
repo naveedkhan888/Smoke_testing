@@ -2142,7 +2142,7 @@ a:hover, a:active {
   z-index: 2;
 }
 .post-box .inner-post {
-  padding: 38px 40px 25px;
+  padding: 38px 0 25px;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -2179,7 +2179,7 @@ a:hover, a:active {
   font-weight: 600;
   font-size: 13px;
   color: #ffffff2e;
-  padding: 22px 40px;
+  padding: 22px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
 .post-box .entry-meta > span {
@@ -2198,7 +2198,7 @@ a:hover, a:active {
 }
 .post-box .entry-meta .btn-details {
   position: absolute;
-  right: 15px;
+  right: 0;
   top: 50%;
   color: #9f9e9e;
   background: transparent !important;
@@ -2229,7 +2229,7 @@ a:hover, a:active {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
-  padding: 30px 40px 0 40px;
+  padding: 0 0 0 0;
   border-bottom: none;
 }
 .post-box .padding-box + .inner-post {
@@ -2246,7 +2246,7 @@ a:hover, a:active {
   border-color: rgba(255, 255, 255, 0.5);
 }
 .post-box .audio-box {
-  padding-top: 40px;
+  padding-top: 0;
 }
 .post-box .audio-box iframe {
   width: 100%;

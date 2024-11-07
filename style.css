@@ -5515,6 +5515,9 @@ object {
 /*--------------------------------------------------------------
 ## Post
 --------------------------------------------------------------*/
+.post-slider .post-box .inner-post > .post-cat {
+  display: none;
+}
 .post-slider .post-box .post-inner {
   margin-bottom: 0;
 }

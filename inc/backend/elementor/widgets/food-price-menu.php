@@ -216,7 +216,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
                 'label' => __( 'Price Color', 'restobar' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .price' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .menu-item .content .title_priccce .price' => 'color: {{VALUE}}',
                 ],
             ]
         );
